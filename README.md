@@ -90,3 +90,12 @@ Virtual Private Cloud é o serviço de rede AWS que atenderá seus requisitos de
 
 #### Auto Scaling 
 Auto Scaling ajuda a garantir que você tenha o número correto de instâncias ec2 disponíveis para Lidar com a carga da sua aplicação.
+
+## Terceira etapa:
+
+```
+yum install nginx
+```
+```
+yum install php-fpm
+```
