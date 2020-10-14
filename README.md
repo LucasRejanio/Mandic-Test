@@ -1,5 +1,5 @@
 # Mandic-Test
-Esse repositorio tem como objetivo detalhar todo o processo de resolução do teste técnico aplicado pela empresa Mandic Cloud Solution. O teste foi ministrado pelo gerente de engenharia SRE - Diogo Lima. 
+Esse repositório tem como objetivo detalhar todo o processo de resolução do teste técnico aplicado pela empresa Mandic Cloud Solution. O teste foi ministrado pelo gerente de engenharia SRE - Diogo Lima. 
 
 ## Proposta de teste:
 
@@ -39,10 +39,10 @@ Instalar e configurar na máquina que lhe passei acesso os seguintes componentes
 - O Tomcat precisa apenas estar no ar e via Nginx entregar a página padrão
 
 ### entradas:
-- sites.dominio < DNS do site estático
-- loja.dominio < DNS do Magento
-- blog.dominio < dns do WordPress
-- tomcat.dominio < dns do Tomcat
+- sites.domínio < DNS do site estático
+- loja.domínio < DNS do Magento
+- blog.domínio < dns do WordPress
+- tomcat.domínio < dns do Tomcat
 - o site deve apontar para um index.php
 - o blog não pode abrir com /wordpress na frente
 - documentação dos passos realizados para a criação desse ambiente.
