@@ -94,14 +94,12 @@ Auto Scaling ajuda a garantir que você tenha o número correto de instâncias e
 ## Terceira etapa:
 ```
 yum install nginx
-```
-```
 yum install php-fpm
 ```
 
 ## Quarta etapa:
 
-#### Criar um domínio e ajustar as entradas de DNS
+### Criar um domínio e ajustar as entradas de DNS
 Realizei a compra do domínio rejanio.xyz e adionei os subdominios na própria plataforma da Hostinger. </br>
 Subdomínios: </br>
 - siterejanio.rejanio.xyz
@@ -109,7 +107,7 @@ Subdomínios: </br>
 - lojarejanio.rejanio.xyz
 - tomcatrejanio.rejanio.xyz
 
-#### Criar um webserver
+### Criar um webserver
 1. Primeiro eu realizei a criação da pasta da aplicação (é importante lembrar que todas as aplicações estão no diretório: /usr/share/nginx).
 2. Criar o arquivo index.php com o conteudo da aplicação: 
 ```
@@ -122,7 +120,7 @@ Subdomínios: </br>
  </body>
 </html>
 ```
-3. Criar o arquivo de configuração do Nginx no diretório /etc/nginx/sites-avaliable:
+3. Criar o arquivo de configuração do nginx no diretório /etc/nginx/sites-avaliable:
 ```
 server {
     listen 80; #Porta
@@ -135,3 +133,62 @@ server {
     }
 }
 ```
+### Criar um blog
+1. Download do banco de dados (MariaDB 10.4.15).
+2. Configurar o arquivo de configuração do nginx:
+```
+server {
+    listen 80;
+    root /usr/share/nginx/wordpress;
+    index index.php index.html index.htm;
+    server_name blogrejanio.rejanio.xyz;
+    location / {
+         try_files $uri $uri/ /index.php?$args;
+    }
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass 127.0.0.1:9000;
+    }
+    # Log do server
+    error_log /var/log/nginx/blog.log;
+    access_log  /var/log/nginx/blog.log;
+}
+```
+3. Gerar o certificado.
+```
+yum install certbot-nginx
+certbot --nginx
+```
+4. Adicionar o certificado ao arquivo de config: 
+```
+server {
+    listen 80;
+    root /usr/share/nginx/wordpress;
+    index index.php index.html index.htm;
+    server_name blogrejanio.rejanio.xyz;
+    location / {
+         try_files $uri $uri/ /index.php?$args;
+    }
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass 127.0.0.1:9000;
+    }
+    # Log do server
+    error_log /var/log/nginx/blog.log;
+    access_log  /var/log/nginx/blog.log;
+    
+    listen 443 ssl http2; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/blogrejanio.rejanio.xyz/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/blogrejanio.rejanio.xyz/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+```
+5. Criar Database: 
+```
+mysql -u root -p
+create database name;
+create user 'name'@'localhost' identified by 'password';
+grant all privileges on name.* to 'name'@'localhost';
+```
+5. Confidurar banco na aplicação.
