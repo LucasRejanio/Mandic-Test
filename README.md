@@ -135,8 +135,8 @@ server {
 ```
 ### Criar um blog
 1. Download do banco de dados (MariaDB 10.4.15).
-2. Realizar o download do wordpress no /usr/share/nginx.
-3. Configurar o arquivo de configuração do nginx:
+2. Download do wordpress no /usr/share/nginx.
+3. Configurar o arquivo do nginx:
 ```
 server {
     listen 80;
@@ -155,7 +155,7 @@ server {
     access_log  /var/log/nginx/blog.log;
 }
 ```
-4. Gerar o certificado.
+4. Gerar o certificado:
 ```
 yum install certbot-nginx
 certbot --nginx
@@ -210,7 +210,7 @@ curl -sS https://getcomposer.org/installer | php
 ```
 git clone https://github.com/magento/magento2.git
 ```
-4. Configurar o virtual host do nginx:
+4. Configurar o arquivo do nginx:
 ```
 upstream fastcgi_backend {
         server  localhost:9000;
@@ -225,7 +225,7 @@ server {
 ```
 
 ### Configurar Tomcat
-Nessa etapa realizei a configuração de um proxy reverso, no caso do tomcat é um pouco diferente dos outros porque estamos falando de um serviço que por padrão sobe na porta 80.1
+Nessa etapa realizei a configuração de um proxy reverso. No caso do tomcat é um pouco diferente dos outros, pois estamos falando de um serviço que por padrão sobe na porta 8080.
 
 1. Instalar o java:
 ```
@@ -252,3 +252,12 @@ server {
     }
 }
 ```
+
+## Conclusão:
+
+- [x] Criar um domínio e ajustar as entradas de DNS
+- [x] Criar um webserver USE o SEU ATUAL 
+- [x] Configurar uma loja com Magento
+- [x] Configurar um blog com WordPress
+- [x] Configurar o Tomcat
+- [x] Criar certificado SSL wildcard
