@@ -158,7 +158,7 @@ server {
 }
 ```
 4. Gerar o certificado:
-```
+```console
 yum install certbot-nginx
 certbot --nginx
 ```
@@ -205,11 +205,11 @@ create user 'name'@'localhost' identified by 'password';
 grant all privileges on name.* to 'name'@'localhost';
 ```
 2. Instalar o composer:
-```
+```console
 curl -sS https://getcomposer.org/installer | php
 ```
 3. Instalar o magento2:
-```
+```console
 git clone https://github.com/magento/magento2.git
 ```
 4. Configurar o arquivo do nginx:
@@ -230,11 +230,11 @@ server {
 Nessa etapa realizei a configuração de um proxy reverso. No caso do tomcat é um pouco diferente dos outros, pois estamos falando de um serviço que por padrão sobe na porta 8080.
 
 1. Instalar o java:
-```
+```console
 yum install java-1.7.0-openjdk.x86_64
 ```
 2. Instalar o tomcat:
-```
+```console
 yum install tomcat
 yum install tomcat-webapps tomcat-admin-webapps tomcat-docs-webapp tomcat-javadoc
 ```
