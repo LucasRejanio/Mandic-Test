@@ -193,3 +193,62 @@ create user 'name'@'localhost' identified by 'password';
 grant all privileges on name.* to 'name'@'localhost';
 ```
 7. Configurar banco na aplicação no arquivo wp-config.php.
+
+### Criar uma loja
+1. Criar o banco de dados:
+```
+mysql -u root -p
+create database name;
+create user 'name'@'localhost' identified by 'password';
+grant all privileges on name.* to 'name'@'localhost';
+```
+2. Instalar o composer:
+```
+curl -sS https://getcomposer.org/installer | php
+```
+3. Instalar o magento2:
+```
+git clone https://github.com/magento/magento2.git
+```
+4. Configurar o virtual host do nginx:
+```
+upstream fastcgi_backend {
+        server  localhost:9000;
+}
+server {
+        listen 80;
+        server_name lojarejanio.rejanio.xyz;
+        set $MAGE_ROOT /usr/share/nginx/magento2;
+        set $MAGE_MODE developer;
+        include /usr/share/nginx/magento2/nginx.conf.sample;
+}
+```
+
+### Configurar Tomcat
+Nessa etapa realizei a configuração de um proxy reverso, no caso do tomcat é um pouco diferente dos outros porque estamos falando de um serviço que por padrão sobe na porta 80.1
+
+1. Instalar o java:
+```
+yum install java-1.7.0-openjdk.x86_64
+```
+2. Instalar o tomcat:
+```
+yum install tomcat
+yum install tomcat-webapps tomcat-admin-webapps tomcat-docs-webapp tomcat-javadoc
+```
+3. Configurar o proxy reverso no nginx:
+```
+server {
+    listen 80;
+    listen [::]:80;
+    server_name tomcatrejanio.rejanio.xyz;# YOUR DOMAIN NAME
+    location / {
+            proxy_redirect      off;
+            proxy_set_header    X-Real-IP $remote_addr;
+            proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header    X-Forwarded-Proto $scheme;
+            proxy_set_header    Host $host;
+            proxy_pass          http://localhost:8080;# YOUR TOMCAT IP ADDRESS
+    }
+}
+```
