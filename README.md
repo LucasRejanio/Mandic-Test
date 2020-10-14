@@ -92,10 +92,46 @@ Virtual Private Cloud é o serviço de rede AWS que atenderá seus requisitos de
 Auto Scaling ajuda a garantir que você tenha o número correto de instâncias ec2 disponíveis para Lidar com a carga da sua aplicação.
 
 ## Terceira etapa:
-
 ```
 yum install nginx
 ```
 ```
 yum install php-fpm
+```
+
+## Quarta etapa:
+
+#### Criar um domínio e ajustar as entradas de DNS
+Realizei a compra do domínio rejanio.xyz e adionei os subdominios na própria plataforma da Hostinger. </br>
+Subdomínios: </br>
+- siterejanio.rejanio.xyz
+- blogrejanio.rejanio.xyz
+- lojarejanio.rejanio.xyz
+- tomcatrejanio.rejanio.xyz
+
+#### Criar um webserver
+1. Primeiro eu realizei a criação da pasta da aplicação (é importante lembrar que todas as aplicações estão no diretório: /usr/share/nginx).
+2. Criar o arquivo index.php com o conteudo da aplicação: 
+```
+<html>
+ <head>
+  <title>Teste PHP</title>
+ </head>
+ <body>
+ <?php echo "<p>Olá, estagiário</p>"; ?>
+ </body>
+</html>
+```
+3. Criar o arquivo de configuração do Nginx no diretório /etc/nginx/sites-avaliable:
+```
+server {
+    listen 80; #Porta
+    server_name    siterejanio.rejanio.xyz; #DNS
+    root           /usr/share/nginx/site; #Diretório da aplicação
+    index          index.php index.html; #Index
+   location ~ \.php$ { #Config do PHP
+        fastcgi_pass 127.0.0.1:9000;
+        include snippets/fastcgi-php.conf;
+    }
+}
 ```
