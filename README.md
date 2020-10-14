@@ -135,7 +135,8 @@ server {
 ```
 ### Criar um blog
 1. Download do banco de dados (MariaDB 10.4.15).
-2. Configurar o arquivo de configuração do nginx:
+2. Realizar o download do wordpress no /usr/share/nginx.
+3. Configurar o arquivo de configuração do nginx:
 ```
 server {
     listen 80;
@@ -154,12 +155,12 @@ server {
     access_log  /var/log/nginx/blog.log;
 }
 ```
-3. Gerar o certificado.
+4. Gerar o certificado.
 ```
 yum install certbot-nginx
 certbot --nginx
 ```
-4. Adicionar o certificado ao arquivo de config: 
+5. Adicionar o certificado ao arquivo de config: 
 ```
 server {
     listen 80;
@@ -184,11 +185,11 @@ server {
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 }
 ```
-5. Criar Database: 
+6. Criar Database: 
 ```
 mysql -u root -p
 create database name;
 create user 'name'@'localhost' identified by 'password';
 grant all privileges on name.* to 'name'@'localhost';
 ```
-5. Confidurar banco na aplicação.
+7. Configurar banco na aplicação no arquivo wp-config.php.
