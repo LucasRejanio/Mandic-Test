@@ -25,12 +25,12 @@ Instalar e configurar na máquina que lhe passei acesso os seguintes componentes
 
 ### 4. Atividades
 
-- [] Criar um domínio e ajustar as entradas de DNS
-- [] Criar um webserver USE o SEU ATUAL 
-- [] Configurar uma loja com Magento
-- [] Configurar um blog com WordPress
-- [] Configurar o Tomcat
-- [] Criar certificado SSL wildcard
+- [ ] Criar um domínio e ajustar as entradas de DNS
+- [ ] Criar um webserver USE o SEU ATUAL 
+- [ ] Configurar uma loja com Magento
+- [ ] Configurar um blog com WordPress
+- [ ] Configurar o Tomcat
+- [ ] Criar certificado SSL wildcard
 
 ## Aceitação
 - Ao menos um dos sites deve estar configurado com o certificado SSL
