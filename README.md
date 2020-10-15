@@ -95,7 +95,7 @@ Auto Scaling ajuda a garantir que você tenha o número correto de instâncias e
 ```shell
 yum install nginx
 ```
-```console
+```shell
 yum install php-fpm
 ```
 
@@ -158,7 +158,7 @@ server {
 }
 ```
 4. Gerar o certificado:
-```console
+```shell
 yum install certbot-nginx
 certbot --nginx
 ```
@@ -198,18 +198,18 @@ grant all privileges on name.* to 'name'@'localhost';
 
 ### Criar uma loja
 1. Criar o banco de dados:
-```
+```mysql
 mysql -u root -p
 create database name;
 create user 'name'@'localhost' identified by 'password';
 grant all privileges on name.* to 'name'@'localhost';
 ```
 2. Instalar o composer:
-```console
+```shell
 curl -sS https://getcomposer.org/installer | php
 ```
 3. Instalar o magento2:
-```console
+```shell
 git clone https://github.com/magento/magento2.git
 ```
 4. Configurar o arquivo do nginx:
@@ -230,11 +230,11 @@ server {
 Nessa etapa realizei a configuração de um proxy reverso. No caso do tomcat é um pouco diferente dos outros, pois estamos falando de um serviço que por padrão sobe na porta 8080.
 
 1. Instalar o java:
-```console
+```shell
 yum install java-1.7.0-openjdk.x86_64
 ```
 2. Instalar o tomcat:
-```console
+```shell
 yum install tomcat
 yum install tomcat-webapps tomcat-admin-webapps tomcat-docs-webapp tomcat-javadoc
 ```
