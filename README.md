@@ -123,7 +123,7 @@ Subdomínios: </br>
 </html>
 ```
 3. Criar o arquivo de configuração do nginx no diretório /etc/nginx/sites-avaliable:
-```
+```nginxconf
 server {
     listen 80; #Porta
     server_name    siterejanio.rejanio.xyz; #DNS
