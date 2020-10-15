@@ -271,6 +271,6 @@ server {
 ### Aplicações: 
 
 - [ Site ] http://siterejanio.rejanio.xyz </br>
-- [ Blog ] http://blogrejanio.rejanio.xyz </br>
+- [ Blog ] http://blogrejanio.rejanio.xyz ou https://blogrejanio.rejanio.xyz </br>
 - [ Loja ] http://lojarejanio.rejanio.xyz </br>
 - [ Tomcat ] http://tomcatrejanio.rejanio.xyz </br>
