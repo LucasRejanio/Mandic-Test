@@ -267,3 +267,9 @@ server {
 - [x] Configurar um blog com WordPress
 - [x] Configurar o Tomcat
 - [x] Criar certificado SSL wildcard
+
+## Aplicações: 
+```http
+http://siterejanio.rejanio.xyz
+```
+
