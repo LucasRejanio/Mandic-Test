@@ -274,4 +274,3 @@ server {
 - [ Blog ] http://blogrejanio.rejanio.xyz </br>
 - [ Loja ] http://lojarejanio.rejanio.xyz </br>
 - [ Tomcat ] http://tomcatrejanio.rejanio.xyz </br>
-
