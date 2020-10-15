@@ -270,7 +270,7 @@ server {
 
 ### Aplicações: 
 
-http://siterejanio.rejanio.xyz </br>
+- [Site] http://siterejanio.rejanio.xyz </br>
 http://blogrejanio.rejanio.xyz </br>
 http://lojarejanio.rejanio.xyz </br>
 http://tomcatrejanio.rejanio.xyz </br>
