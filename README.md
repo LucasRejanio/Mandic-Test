@@ -268,10 +268,10 @@ server {
 - [x] Configurar o Tomcat
 - [x] Criar certificado SSL wildcard
 
-## Aplicações: 
+### Aplicações: 
 
-(http://siterejanio.rejanio.xyz)
-(http://blogrejanio.rejanio.xyz)
-(http://lojarejanio.rejanio.xyz)
-(http://tomcatrejanio.rejanio.xyz)
+http://siterejanio.rejanio.xyz </br>
+http://blogrejanio.rejanio.xyz </br>
+http://lojarejanio.rejanio.xyz </br>
+http://tomcatrejanio.rejanio.xyz </br>
 
