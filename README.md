@@ -269,7 +269,9 @@ server {
 - [x] Criar certificado SSL wildcard
 
 ## Aplicações: 
-```http
-http://siterejanio.rejanio.xyz
-```
+
+(http://siterejanio.rejanio.xyz)
+(http://blogrejanio.rejanio.xyz)
+(http://lojarejanio.rejanio.xyz)
+(http://tomcatrejanio.rejanio.xyz)
 
