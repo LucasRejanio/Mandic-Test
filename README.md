@@ -74,7 +74,7 @@ Instalar e configurar na máquina que lhe passei acesso os seguintes componentes
 Amazon RDS é o serviço da AWS que proporciona a criação de um banco de dados relacional hospedado totalmente na nuvem AWS sem precisar de uma administração contínua.
 
 #### CloudWatch
-Amazon CloudWatch é basicamente um serviço de monitoramento que permite monitorar seus recursos AWS e os aplicativos que você executa neles em tempo real. Alguns recursos do Amazon CloudWatch incluem coleta e rastreamento de métricas como utilização de CPU, transferência de dados, utilização de disco e etc, também podemos monitorar serviços para recursos e aplicativos em nuvem, além disso, você tem a  capacidade de definir alarmes em qualquer uma das suas métricas para enviar notificações ou realizar alguma ação automatizada. 
+Amazon CloudWatch é basicamente um serviço de monitoramento que permite monitorar seus recursos AWS e os aplicativos que você executa neles em tempo real. Alguns recursos do Amazon CloudWatch incluem coleta e rastreamento de métricas como utilização de CPU, transferência de dados, utilização de disco e etc. Também podemos monitorar serviços para recursos e aplicativos em nuvem, além disso, você tem a  capacidade de definir alarmes em qualquer uma das suas métricas para enviar notificações ou realizar alguma ação automatizada. 
 
 #### Router 53 
 Route 53 é um sistema de nomes de domínio ou DNS, que é um serviço projetado para fornecer a empresas e desenvolvedores de forma confiável e altamente escalável para rotear usuários finais para terminais. 
@@ -89,7 +89,7 @@ O Elastic Load Balancing distribui automaticamente o tráfego de entrada de apli
 Virtual Private Cloud é o serviço de rede AWS que atenderá seus requisitos de rede. Amazon VPC permite que você crie uma rede privada dentro da nuvem AWS que usa muitos dos mesmos conceitos e constrói como uma rede local.
 
 #### Auto Scaling 
-Auto Scaling ajuda a garantir que você tenha o número correto de instâncias ec2 disponíveis para Lidar com a carga da sua aplicação.
+Auto Scaling ajuda a garantir que você tenha o número correto de instâncias ec2 disponíveis para lidar com a carga da sua aplicação.
 
 ## Terceira etapa:
 ```console
