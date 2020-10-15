@@ -92,10 +92,10 @@ Virtual Private Cloud é o serviço de rede AWS que atenderá seus requisitos de
 Auto Scaling ajuda a garantir que você tenha o número correto de instâncias ec2 disponíveis para Lidar com a carga da sua aplicação.
 
 ## Terceira etapa:
-```comand
+```console
 yum install nginx
 ```
-```comand
+```console
 yum install php-fpm
 ```
 
@@ -158,10 +158,10 @@ server {
 }
 ```
 4. Gerar o certificado:
-```comand
+```console
 yum install certbot-nginx
 ```
-```comand
+```console
 certbot --nginx
 ```
 5. Adicionar o certificado ao arquivo de config: 
@@ -207,11 +207,11 @@ create user 'name'@'localhost' identified by 'password';
 grant all privileges on name.* to 'name'@'localhost';
 ```
 2. Instalar o composer:
-```comand
+```console
 curl -sS https://getcomposer.org/installer | php
 ```
 3. Instalar o magento2:
-```comand
+```console
 git clone https://github.com/magento/magento2.git
 ```
 4. Configurar o arquivo do nginx:
@@ -232,14 +232,14 @@ server {
 Nessa etapa realizei a configuração de um proxy reverso. No caso do tomcat é um pouco diferente dos outros, pois estamos falando de um serviço que por padrão sobe na porta 8080.
 
 1. Instalar o java:
-```comand
+```console
 yum install java-1.7.0-openjdk.x86_64
 ```
 2. Instalar o tomcat:
-```comand
+```console
 yum install tomcat
 ```
-```comand
+```console
 yum install tomcat-webapps tomcat-admin-webapps tomcat-docs-webapp tomcat-javadoc
 ```
 3. Configurar o proxy reverso no nginx:
