@@ -92,7 +92,7 @@ Virtual Private Cloud é o serviço de rede AWS que atenderá seus requisitos de
 Auto Scaling ajuda a garantir que você tenha o número correto de instâncias ec2 disponíveis para Lidar com a carga da sua aplicação.
 
 ## Terceira etapa:
-```console
+```shell
 yum install nginx
 ```
 ```console
@@ -112,7 +112,7 @@ Subdomínios: </br>
 ### Criar um webserver
 1. Primeiro eu realizei a criação da pasta da aplicação (é importante lembrar que todas as aplicações estão no diretório: /usr/share/nginx).
 2. Criar o arquivo index.php com o conteudo da aplicação: 
-```
+```php
 <html>
  <head>
   <title>Teste PHP</title>
@@ -139,7 +139,7 @@ server {
 1. Download do banco de dados (MariaDB 10.4.15).
 2. Download do wordpress no /usr/share/nginx.
 3. Configurar o arquivo do nginx:
-```
+```nginxconf
 server {
     listen 80;
     root /usr/share/nginx/wordpress;
@@ -163,7 +163,7 @@ yum install certbot-nginx
 certbot --nginx
 ```
 5. Adicionar o certificado ao arquivo de config: 
-```
+```nginxconf
 server {
     listen 80;
     root /usr/share/nginx/wordpress;
@@ -188,7 +188,7 @@ server {
 }
 ```
 6. Criar Database: 
-```
+```mysql
 mysql -u root -p
 create database name;
 create user 'name'@'localhost' identified by 'password';
@@ -213,7 +213,7 @@ curl -sS https://getcomposer.org/installer | php
 git clone https://github.com/magento/magento2.git
 ```
 4. Configurar o arquivo do nginx:
-```
+```nginxconf
 upstream fastcgi_backend {
         server  localhost:9000;
 }
@@ -239,7 +239,7 @@ yum install tomcat
 yum install tomcat-webapps tomcat-admin-webapps tomcat-docs-webapp tomcat-javadoc
 ```
 3. Configurar o proxy reverso no nginx:
-```
+```nginxconf
 server {
     listen 80;
     listen [::]:80;
