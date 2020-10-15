@@ -50,20 +50,20 @@ Instalar e configurar na máquina que lhe passei acesso os seguintes componentes
 # Resolução
 
 ## Primeira etapa: 
-Criação de usuario: useradd -m usuario </br>
-Criação de pastas: mkdir </br>
-Permissionamento de arquivos e pastas:  chmod e chown </br>
-iostat: Comando utilizado para mostrar o relatório de uso de CPU e de entrada/saída dos dispositivos de armazenamento. </br> 
-htop: Comando utilizado para monitorar dados como: processos, consumo de CPU, consumo de RAM, PID das tarefas. </br>
-ps -ef: Comando utilizado para verificação de processos em execução na maquina. </br>
-grep: É o comando que utilizamos quando queremos especificar algo. por exemplo: netstat -anp | grep 8080. </br>
-top: Top é o antecessor do htop, o htop é mais robusto. </br> 
-free -m: O comando free do Linux é muito útil para se observar e monitorar o uso da memória do sistema. </br>
-df -h: Mostra o espaço livre/ocupado/compartilhado de cada partição. </br> 
-fdisk -l:  Comando que fornece funções de particionamento de disco. </br>
-netstat -tplun: É uma ferramenta utilitária de rede de linha de comando que exibe conexões de rede. </br>
-awk: Na verdade o awk não é um simples comando, ele é uma linguagem de programação. Resumidamente, podemos dizer que seu príncipio se baseia em procurar em um ou mais arquivos por linhas que contenham um determinado padrão e, quando encontrar, executar uma determinada ação. </br>
-sed: O comando SED no Linux é uma ferramenta poderosa que ajuda a executar tarefas de uso geral. Entre elas: analisar e transformar textos.
+**Criação de usuario:** useradd -m usuario </br>
+**Criação de pastas:** mkdir </br>
+**Permissionamento de arquivos e pastas:**  chmod e chown </br>
+**iostat:** Comando utilizado para mostrar o relatório de uso de CPU e de entrada/saída dos dispositivos de armazenamento. </br> 
+**htop:** Comando utilizado para monitorar dados como: processos, consumo de CPU, consumo de RAM, PID das tarefas. </br>
+**ps -ef:** Comando utilizado para verificação de processos em execução na maquina. </br>
+**grep:** É o comando que utilizamos quando queremos especificar algo. por exemplo: netstat -anp | grep 8080. </br>
+**top:** Top é o antecessor do htop, o htop é mais robusto. </br> 
+**free -m:** O comando free do Linux é muito útil para se observar e monitorar o uso da memória do sistema. </br>
+**df -h:** Mostra o espaço livre/ocupado/compartilhado de cada partição. </br> 
+**fdisk -l:**  Comando que fornece funções de particionamento de disco. </br>
+**netstat -tplun:** É uma ferramenta utilitária de rede de linha de comando que exibe conexões de rede. </br>
+**awk:** Na verdade o awk não é um simples comando, ele é uma linguagem de programação. Resumidamente, podemos dizer que seu príncipio se baseia em procurar em um ou mais arquivos por linhas que contenham um determinado padrão e, quando encontrar, executar uma determinada ação. </br>
+**sed:** O comando SED no Linux é uma ferramenta poderosa que ajuda a executar tarefas de uso geral. Entre elas: analisar e transformar textos.
 
 ## Segunda etapa:
 
