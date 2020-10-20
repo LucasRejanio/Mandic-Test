@@ -208,7 +208,7 @@ grant all privileges on name.* to 'name'@'localhost';
 ```
 2. Instalar o composer:
 ```console
-curl -sS https://getcomposer.org/installer | php
+curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
 ```
 3. Instalar o magento2:
 ```console
