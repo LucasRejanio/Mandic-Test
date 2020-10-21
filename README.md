@@ -129,7 +129,7 @@ server {
     server_name    siterejanio.rejanio.xyz; #DNS
     root           /usr/share/nginx/site; #Diretório da aplicação
     index          index.php index.html; #Index
-   location ~ \.php$ { #Config do PHP
+    location ~ \.php$ { #Config do PHP
         fastcgi_pass 127.0.0.1:9000;
         include snippets/fastcgi-php.conf;
     }
