@@ -1,4 +1,6 @@
-# Mandic-Test
+![Test library workflow status](https://github.com/tcort/markdown-link-check/workflows/Test%20library/badge.svg)
+
+# Mandic test
 Esse repositório tem como objetivo detalhar todo o processo de resolução do teste técnico aplicado pela empresa Mandic Cloud Solution. O teste foi ministrado pelo gerente de engenharia SRE - Diogo Lima. 
 
 ## Proposta de teste:
