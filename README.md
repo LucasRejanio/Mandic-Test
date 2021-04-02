@@ -1,3 +1,5 @@
+<img alt="Nginx" src="https://img.shields.io/badge/nginx%20-%23009639.svg?&style=for-the-badge&logo=nginx&logoColor=white"/>
+
 # Mandic test
 Esse repositório tem como objetivo detalhar todo o processo de resolução do teste técnico aplicado pela empresa Mandic Cloud Solution. O teste foi ministrado pelo gerente de engenharia SRE - Diogo Lima. 
 
